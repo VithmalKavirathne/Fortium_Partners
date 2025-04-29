@@ -1,6 +1,6 @@
 package edu.icet.dto;
 
-import icet.edu.com.util.Department;
+import edu.icet.util.Department;
 import lombok.Data;
 
 import java.time.LocalDateTime;

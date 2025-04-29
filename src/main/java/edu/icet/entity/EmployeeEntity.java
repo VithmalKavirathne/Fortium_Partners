@@ -1,6 +1,6 @@
 package edu.icet.entity;
 
-import icet.edu.com.util.Department;
+import edu.icet.util.Department;
 import jakarta.persistence.*;
 import lombok.Data;
 

@@ -1,7 +1,7 @@
 package edu.icet.repository;
 
-import icet.edu.com.entity.EmployeeEntity;
-import icet.edu.com.util.Department;
+import edu.icet.entity.EmployeeEntity;
+import edu.icet.util.Department;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

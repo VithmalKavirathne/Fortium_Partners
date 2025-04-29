@@ -1,8 +1,8 @@
 package edu.icet.controller;
 
-import icet.edu.com.dto.LogInRequest;
-import icet.edu.com.dto.UserDto;
-import icet.edu.com.service.UserService;
+import edu.icet.dto.LogInRequest;
+import edu.icet.dto.UserDto;
+import edu.icet.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RequestMapping("/user")
 @CrossOrigin
-public class UserController {
+public class UserController<LogInRequest> {
 
     private final UserService service;
     @PostMapping

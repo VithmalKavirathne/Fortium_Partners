@@ -1,11 +1,11 @@
 package edu.icet.controller;
 
-import icet.edu.com.dto.EmployeeDto;
-import icet.edu.com.entity.EmployeeEntity;
-import icet.edu.com.repository.EmployeeRepository;
-import icet.edu.com.service.EmployeeService;
-import icet.edu.com.util.Department;
-import icet.edu.com.util.EmailCheck;
+import edu.icet.dto.EmployeeDto;
+import edu.icet.entity.EmployeeEntity;
+import edu.icet.repository.EmployeeRepository;
+import edu.icet.service.EmployeeService;
+import edu.icet.util.Department;
+import edu.icet.util.EmailCheck;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

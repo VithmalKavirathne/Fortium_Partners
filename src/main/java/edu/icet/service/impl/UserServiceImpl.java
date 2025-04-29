@@ -1,5 +1,6 @@
 package edu.icet.service.impl;
 
+import edu.icet.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -9,11 +10,10 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
     final UserRepository repository;
     final ModelMapper mapper;
-    final BCryptPasswordEncoder encoder;
     final EmailCheck emailCheck;
 
     @Override
-    public Boolean saveUser(icet.edu.com.dto.UserDto userDto) {
+    public Boolean saveUser(edu.icet.dto.UserDto userDto) {
         if (userDto == null || !emailCheck.isValid(userDto.getEmail()) || repository.findByEmail(userDto.getEmail()) != null) {
             return false;
         }
@@ -22,8 +22,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public icet.edu.com.dto.UserDto getUser(Long id) {
-        return mapper.map(repository.findById(id), icet.edu.com.dto.UserDto.class);
+    public edu.icet.UserDto getUser(Long id) {
+        return mapper.map(repository.findById(id), edu.icet.UserDto.class);
     }
 
     @Override
