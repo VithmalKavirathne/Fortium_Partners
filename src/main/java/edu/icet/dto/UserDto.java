@@ -1,0 +1,11 @@
+package edu.icet.dto;
+
+import lombok.Data;
+
+@Data
+public class UserDto {
+    private Long id;
+    private String name;
+    private String email;
+    private String password;
+}

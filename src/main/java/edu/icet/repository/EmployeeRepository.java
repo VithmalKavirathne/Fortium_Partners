@@ -1,10 +1,16 @@
 package edu.icet.repository;
 
-import edu.icet.dto.EmployeeDto;
-import org.springframework.data.jpa.repository.JpaRepository;
+import icet.edu.com.entity.EmployeeEntity;
+import icet.edu.com.util.Department;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 @Repository
-public interface EmployeeRepository extends JpaRepository<EmployeeDto,Integer> {
 
+public interface EmployeeRepository extends CrudRepository<EmployeeEntity,Long> {
+    List<EmployeeEntity> findByNameContaining(String name);
+    EmployeeEntity findByEmail(String email);
+    List<EmployeeEntity> findBySalaryBetween(Double minSalary, Double maxSalary);
+    List<EmployeeEntity> findByDepartment(Department department);
 }
